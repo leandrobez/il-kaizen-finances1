@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css"
+    />
+    <title>Kaizen Finances</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="il-brand">
+          <h3>logo</h3>
+        </div>
+        <div class="il-hamb">
+          <div class="il-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="il-container">
+        <div class="il-container--wrapper">
+          <section class="il-section il-section--intro">
+            <h1>Pagamentos para o mês de <span class="il-month"></span></h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo rem
+              eos eligendi debitis, consequuntur ratione! Labore veniam
+              architecto ullam. Consequatur repellendus vel illo labore dolores
+              deleniti placeat cumque non optio!
+            </p>
+          </section>
+          <section class="il-section">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nr</th>
+                  <th>Nome</th>
+                  <th>Vezes</th>
+                  <th>Valor</th>
+                  <th>Pago</th>
+                  <th>Data</th>
+                  <th>Tipo</th>
+                  <th>Obs</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody class="il-list"></tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+      <div class="il-modal--container">
+        <div class="il-modal">
+          <div class="il-modal--header">
+            <h4 class="il-payed"></h4>
+          </div>
+          <div class="il-modal--body">
+            <div class="il-input--field">
+              <label for="dt">Data</label>
+              <input type="date" id="dt" name="data" value="" />
+            </div>
+            <div class="il-input--field">
+              <label for="pay">Recebido</label>
+              <input type="text" id="pay" name="pago" value="0" />
+            </div>
+            <div class="il-input--field">
+              <label for="type">Forma</label>
+              <select name="type" id="type">
+                <option value="cheque">Cheque</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="tranferencia">Tranferência</option>
+              </select>
+            </div>
+          </div>
+          <div class="il-modal--footer">
+            <button id="btnSave">Receber</button>
+            <button id="btnCancel">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.rawgit.com/mozilla/localForage/master/dist/localforage.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
